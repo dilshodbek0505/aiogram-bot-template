@@ -1,9 +1,9 @@
 import logging
 
 from data.config import ADMINS
-from loader import bot
 
-async def on_startup_notify():
+
+async def on_startup_notify(bot):
     for admin in ADMINS:
         try:
             await bot.send_message(
